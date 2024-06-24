@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+      <!-- <header> -->
+  <div class="cntTotal">
+    <div class="cntHead">
+      <div class="cntFig-1">
+        <div class="fig-1"></div>
+        <div class="fig-2"></div>
+        <div class="fig-3"></div>
+      </div>
+      <div class="separator"><img src="img/ЯблЦв-1.jpeg" alt=""></div>
+      <div class="cntTitle">Приятного<br>аппетита</p></div>
+    </div>
+<!-- </header> -->
+
+    <!-- <form action="https://google.com" method="get" target="_blank"> -->
+    <form action="mailto:it@mail.ru" method="post" target="_blank" class="form">
+      <fieldset class="fieldset">
+        <legend>Required fields</legend>
+        <label for="firstNameID" class="form-label">FirstName: </label>
+        <input type="text" name="firstName" id="firstNameID" placeholder="type your first name" required class="form-control">
+
+        <label for="lastNameID" class="form-label">LastName: </label>
+        <input type="text" name="lastName" id="lastNameID" placeholder="type your last name" required class="form-control">
+        
+        
+        <label for="emailID" class="form-label">Email: </label>
+        <input type="email" name="email" id="emailID" placeholder="type your e-mail" required class="form-control">
+        
+      </fieldset>
+
+      
+      <label for="questionID" class="form-label">Your questions: </label>
+      
+      <textarea name="questions" id="questionID" cols="25" rows="5" placeholder="type your questions..." class="form-control"></textarea>
+      
+      
+      <button type="submit" class="form-control form-submit">Submit btn</button>        
+
+      <!-- https://www.google.com/?firstName=Gally&lastName=Math -->
+    </form>
+  </div>
+  </body>
+</html>
