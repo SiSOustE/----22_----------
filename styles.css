@@ -1,9 +1,7 @@
   :root {
-    --width-1: 100wv;
-    --margin-1: 1wv;
-    --bgColor-1: aliceblue;
     --color-1: #57b;
     --fontColor-1: darkblue;
+    --brdDbl: .2rem double var(--fontColor-1);
   }
 
   * {
@@ -13,71 +11,129 @@
   }
 
   body {
-    background: var(--bgColor-1);
+    box-sizing: border-box;
     color: var(--fontColor-1);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   .cntTotal {
     margin: 2vw;
-    height: 98vh;
-    border: .6vw dashed gray;
-  }
-
-  .cntHead,
-  form {
-    margin: 1vw;
-    border: .2rem double gray;
-    padding: .1wv;
+    padding: 1.5vw;
+    height: 95vh;
+    border: .15rem dashed #a0a0a0;
+    background: aliceblue;
   }
 
   .cntHead {
-    height: 33.3%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 25%;
+    background-color: lightsteelblue;
+    border-radius: 34%;
   }
 
 
-  .cntTitle, .separator, .cntFig-1 {
+  .cntTitle,
+  .cntImg,
+  .cntFig-1 {
+    /* height: 300px; */
+    width: 30%;
+    padding: 1rem;
+    /* margin: .25rem; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px dotted #cdcdcd;
-    height: 30%;
+    border: .34rem dotted #fff;
+    border-radius: 21%;
+    /* height: 7rem; */
+    color: #fff;
   }
-.fig-1, .fig-2, .fig-3 {
-  width: 1.618em;
-  height: 1em;
-  border-radius: 29%;
-  background-color: palegreen;
-}
 
-img {
-  height: 100%;
-}
-.fig-2 {
-background-color: pink;}
-.fig-3 {
-background-color: #f8eb76;}
+  /* .cntTitle {width: 30%;} */
 
-  .cntTitle:hover {
-    background-color: ivory;
+  .cntTitle {
+    color: palegreen;
+    font-size: .7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
+  
+  .fig-1,
+  .fig-2,
+  .fig-3 {
+    width: 1.618em;
+    height: 1em;
+    border-radius: 34%;
+    background-color: palegreen;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  .fig-2 {
+    background-color: pink;
+  }
+
+  .fig-3 {
+    background-color: #f8eb76;
+  }
+  
+  /* .fig-1:hower {
+    transform: rotate(0.5turn);
+    } */
+    .cntTitle:hover {
+      background-color: ivory;
+      color: rgb(222, 48, 132);
+      border: .55rem dotted aquamarine;
+      width: 34%;
+      height: 80%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
+      font-size: 2rem;
+      
+    transition: 1s ease;
+
+  }
+
+  form {
+    border: .17rem lightsteelblue solid;
+    padding: 2vw;
+    margin-top: 4vw;
+    padding-bottom: 1em;
+    border-radius: 5%;
   }
 
 
   .fieldset {
+    height: 65%;
     border: .5px solid rgb(95, 107, 160);
-    padding: 1vw;
+    padding: .25rem;
+    padding: .5rem .25rem .25rem .5rem;
   }
 
   .form-label {
     display: block;
-    margin: 2%;
+    margin: .5rem .25rem .5rem;
   }
 
+
   .form-control {
-    width: 100%;
+    width: 50%;
     height: 2em;
+  }
+
+  .form-control:focus {
+    background-color: ivory;
+  }
+
+
+  .fieldset>.form-control:last-child {
+    margin-bottom: 1rem;
   }
 
   .form-submit {
@@ -89,6 +145,21 @@ background-color: #f8eb76;}
     margin: 1vw 0;
   }
 
-  .form-submit: {
-    background-color: cornsilk;
+  #questionID {
+    height: 5em;
+  }
+
+  @media screen and (min-width: 900px) {
+
+    .cntTotal {
+      max-width: 45%;
+      margin: 2vw;
+      padding: 1.5vw;
+      height: 95vh;
+      border: .17rem dashed lightsteelblue;
+      background: aliceblue;
+    }
+    .cntTitle {
+      font-size: 1.3rem;
+    }
   }
