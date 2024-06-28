@@ -18,7 +18,7 @@
 
   .cntTotal {
     margin: 2vw;
-    padding: 1.5vw;
+    padding: 1.5vh 1.5vw;
     height: 95vh;
     border: .15rem dashed #a0a0a0;
     background: aliceblue;
@@ -26,78 +26,96 @@
 
   .cntHead {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    height: 25%;
-    background-color: lightsteelblue;
-    border-radius: 34%;
+    width: 50%;
+    background-color: rgba(33, 105, 206, 0.63);
+    border-radius: 17%;
+    padding-top: .5rem;
+
   }
 
-
   .cntTitle,
-  .cntImg,
-  .cntFig-1 {
-    /* height: 300px; */
-    width: 30%;
-    padding: 1rem;
-    /* margin: .25rem; */
+  .cntFig {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: .34rem dotted #fff;
     border-radius: 21%;
-    /* height: 7rem; */
-    color: #fff;
+    position: relative;
   }
 
-  /* .cntTitle {width: 30%;} */
 
   .cntTitle {
-    color: palegreen;
-    font-size: .7rem;
+    color: rgb(255, 248, 218);
+    border: .15rem dotted #fff;
+    font-size: 1.1rem;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
+    margin: 1em;
+    padding: .5em;
   }
 
-  
-  .fig-1,
-  .fig-2,
-  .fig-3 {
-    width: 1.618em;
+  .fig-1 {
+    width: 3.2em;
     height: 1em;
+    border: #fff .2rem solid;
     border-radius: 34%;
-    background-color: palegreen;
+    position: absolute;
+    left: 150px;
   }
 
-  img {
-    width: 100%;
-  }
-  
-  .fig-2 {
-    background-color: pink;
+  .fig-4 {
+    background-color: rgb(243, 251, 255);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    animation-name: rtt-1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: ease-out;
   }
 
-  .fig-3 {
-    background-color: #f8eb76;
+  @keyframes rtt-1 {
+    0% {
+      border: #7dcfed dotted .3vw;
+      /* opacity: .50; */
+    }
+
+    50% {
+      background-color: #f9e3d5;
+      rotate: 180deg;
+    }
+
+    100% {
+      /* opacity: .50; */
+      rotate: 360deg;
+      border: rgb(139, 135, 255) dotted .3vw;
+      background-color: rgb(227, 245, 211);
+    }
   }
-  
-  /* .fig-1:hower {
-    transform: rotate(0.5turn);
-    } */
-    .cntTitle:hover {
-      background-color: ivory;
-      color: rgb(222, 48, 132);
-      border: .55rem dotted aquamarine;
-      width: 34%;
-      height: 80%;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
-      font-size: 2rem;
-      
+
+
+  .fig-1 {
+    background-color: rgb(191, 223, 230);
+    height: 4vh;
+    width: 4vw;
+    padding: .5rem;
+  }
+
+
+
+  .cntTitle:hover {
+    background-color: ivory;
+    color: rgb(222, 48, 132);
+    border: .55rem dotted aquamarine;
+    width: 34%;
+    height: 80%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
+    font-size: 2rem;
     transition: 1s ease;
-
   }
 
   form {
@@ -107,7 +125,6 @@
     padding-bottom: 1em;
     border-radius: 5%;
   }
-
 
   .fieldset {
     height: 65%;
@@ -121,7 +138,6 @@
     margin: .5rem .25rem .5rem;
   }
 
-
   .form-control {
     width: 50%;
     height: 2em;
@@ -131,14 +147,12 @@
     background-color: ivory;
   }
 
-
   .fieldset>.form-control:last-child {
     margin-bottom: 1rem;
   }
 
   .form-submit {
-    /* background-color: antiquewhite; */
-    padding: 1vw;
+    padding: 1%;
     border: var(--fontColor-1) solid 0.2vh;
     border-radius: 5px;
     width: auto;
@@ -159,7 +173,9 @@
       border: .17rem dashed lightsteelblue;
       background: aliceblue;
     }
+.cntHead {width: 14vw;}
     .cntTitle {
       font-size: 1.3rem;
     }
+
   }
